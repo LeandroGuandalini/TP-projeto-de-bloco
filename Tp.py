@@ -73,7 +73,7 @@ def remover_tarefa(tarefa_id):
       tarefas.remove(tarefa)
       print(f'\nTarefa "{tarefa['descricao']}" removida com sucesso.')
       return
-    print('\nTarefa não encontrada.')
+  print('\nTarefa não encontrada.')
 
 def menu():
   '''
@@ -103,17 +103,11 @@ def menu():
 
     elif escolha == '3':
       tarefa_id = input('Digite o ID da tarefa a ser marcada como concluída: ')
-      try: 
-        marcar_concluida(tarefa_id)
-      except ValueError:
-        print('\nO ID precisa ser um número')
+      marcar_concluida(tarefa_id)
     
     elif escolha == '4':
       tarefa_id = input('Digite o ID da tarefa a ser removida: ')
-      try: 
-        remover_tarefa(tarefa_id)
-      except ValueError:
-        print('\nO ID precisa ser um número')
+      remover_tarefa(tarefa_id)
 
     elif escolha == '5':
       print('\nSaindo do programa...')
